@@ -622,6 +622,7 @@ class Mechanize
 
   def idle_timeout= idle_timeout
     @agent.idle_timeout = idle_timeout
+    @agent.set_http
   end
 
   ##
@@ -771,6 +772,7 @@ class Mechanize
 
   def retry_change_requests= retry_change_requests
     @agent.retry_change_requests = retry_change_requests
+    @agent.set_http
   end
 
   ##
@@ -850,6 +852,7 @@ class Mechanize
 
   def ca_file= ca_file
     @agent.ca_file = ca_file
+    @agent.set_http
   end
 
   ##
@@ -865,6 +868,7 @@ class Mechanize
 
   def cert= cert
     @agent.cert = cert
+    @agent.set_http
   end
 
   ##
@@ -880,6 +884,7 @@ class Mechanize
 
   def cert_store= cert_store
     @agent.cert_store = cert_store
+    @agent.set_http
   end
 
   ##
@@ -936,6 +941,7 @@ class Mechanize
 
   def verify_callback= verify_callback
     @agent.verify_callback = verify_callback
+    @agent.set_http
   end
 
   ##
@@ -952,6 +958,7 @@ class Mechanize
 
   def verify_mode= verify_mode
     @agent.verify_mode = verify_mode
+    @agent.set_http
   end
 
   # :section: Utilities
